@@ -1,54 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins">
-  <title>Age calculator app</title>
-  
-</head>
-<body>
-  <div class="Body">
-    <div class="input">
-      <div class="inputLine">
-        <h3>Day</h3>
-        <input type="number" placeholder="DD">
-      </div>
-      <div class="inputLine">
-        <h3>Month</h3>
-        <input type="number" placeholder="MM">
-      </div>
-      <div class="inputLine">
-        <h3>Year</h3>
-        <input type="number" placeholder="YYYY">
-      </div>
-    </div>
-    <div class="seperator">
-      <hr>
-      <div class="backgroundIcon">
-        <img src="./assets/images/icon-arrow.svg">
-      </div>
-    </div>
-    <div class="output">
-    
-      <div class="outputLine">
-        <h1>--</h1> <h2>years</h2>
-      </div>
-      <div class="outputLine">
-        <h1>--</h1> <h2>months</h2>
-      </div>
-      <div class="outputLine">
-        <h1>--</h1> <h2>days</h2>
-      </div>
-
-    </div>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Gianluca</a>.
-    </div>
-</div>
-</body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins" />
+    <title>Age calculator app</title>
+  </head>
+  <body>
+    <main>
+      <section class="date_wrapper">
+        <div class="input_wrapper date">
+          <h4>Day</h4>
+          <input type="number" placeholder="DD" max="99" />
+        </div>
+        <div class="input_wrapper month">
+          <h4>Month</h4>
+          <input type="number" placeholder="MM" max="99" size="number" />
+        </div>
+        <div class="input_wrapper year">
+          <h4>Year</h4>
+          <input type="number" placeholder="YYYY" max="9999" />
+        </div>
+      </section>
+      <section class="submit_btn">
+        <hr />
+        <div class="backgroundIcon">
+          <img src="./assets/images/icon-arrow.svg" />
+        </div>
+      </section>
+      <section class="output">
+        <div class="outputLine">
+          <h2>--</h2>
+          <h3>years</h3>
+        </div>
+        <div class="outputLine">
+          <h2>11</h2>
+          <h3>months</h3>
+        </div>
+        <div class="outputLine">
+          <h2>--</h2>
+          <h3>days</h3>
+        </div>
+      </section>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Gianluca</a>.
+    </footer>
+  </body>
 </html>
+
+<!-- 
+- weißen Block zentrieren(vertikal und horizontal)
+- border-radius for weißen Block
+- font-weight der output
+- color/opacity der Überschriften
+-->

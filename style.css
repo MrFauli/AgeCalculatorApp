@@ -1,45 +1,91 @@
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
-Body {background-color:Grey 100 ;
-    /*display:flex;*/
-    font-family: "Poppins",sans-serif;}
-.Body {
-    background-color:White;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 10px;
 }
-.input {
-    display: flex;
-    flex-direction: row;
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
-.
-.inputLine {
+body {
+  background-color: hsl(0, 0%, 94%);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 150px 0;
 }
-input {
-    font-size: 20px;
+main {
+  width: 375px;
+  background-color: white;
+  padding: 36px 24px;
+  border-radius: 5% 5% 20% 5%;
+}
+.date_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date_wrapper .input_wrapper {
+  width: 72px;
+}
+.date_wrapper input {
+  font-size: 20px;
+  width: 100%;
+  height: 48px;
+  padding-left: 8px;
 }
 .outputLine {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-end;
+  font-size: 32px;
 }
 .seperator {
-   
+}
+.submit_btn {
+  position: relative;
 }
 .backgroundIcon {
-    background-color: hsl(259, 100%, 65%);
-    width: 70px;
-    height: 70px;
-    left: 35px;
-    top:auto;
-    text-align: center;
-    border-radius: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: hsl(259, 100%, 65%);
+  width: 70px;
+  height: 70px;
+  justify-content: center;
+  text-align: center;
+  border-radius: 70px;
+  transform: translate(-50%, -50%);
 }
-h1 {
-    color:hsl(259, 100%, 65%);
-    font-weight: 500;
+.backgroundIcon img {
+  width: 32px;
 }
-h2 {
-    color:Black;
-    font-weight: 700;
+.output h2 {
+  color: hsl(259, 100%, 65%);
+  font-size: 56px;
+  font-weight: 900;
+}
+.output h3 {
+  color: Black;
+  font-size: 48px;
+  font-weight: 900;
+}
+
+hr {
+  margin: 56px 0;
+}
+.date_wrapper h4 {
+  opacity: 0.65;
+  font-size: larger;
 }
