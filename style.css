@@ -1,0 +1,45 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+Body {background-color:Grey 100 ;
+    /*display:flex;*/
+    font-family: "Poppins",sans-serif;}
+.Body {
+    background-color:White;
+
+}
+.input {
+    display: flex;
+    flex-direction: row;
+}
+.
+.inputLine {
+}
+input {
+    font-size: 20px;
+}
+.outputLine {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-end;
+}
+.seperator {
+   
+}
+.backgroundIcon {
+    background-color: hsl(259, 100%, 65%);
+    width: 70px;
+    height: 70px;
+    left: 35px;
+    top:auto;
+    text-align: center;
+    border-radius: 70px;
+}
+h1 {
+    color:hsl(259, 100%, 65%);
+    font-weight: 500;
+}
+h2 {
+    color:Black;
+    font-weight: 700;
+}
