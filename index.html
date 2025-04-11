@@ -11,44 +11,71 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    /> -->
     <title>Age calculator app</title>
   </head>
   <body>
     <main>
       <section class="date_wrapper">
         <div class="input_wrapper date">
-          <h4>Day</h4>
-          <input type="number" placeholder="DD" max="99" />
+          <h4 class="names">DAY</h4>
+          <input
+            type="number"
+            id="input_wrapperDay"
+            placeholder="DD"
+            max="99"
+          />
         </div>
         <div class="input_wrapper month">
-          <h4>Month</h4>
-          <input type="number" placeholder="MM" max="99" size="number" />
+          <h4 class="names">MONTH</h4>
+          <input
+            type="number"
+            id="input_wrapperMonth"
+            placeholder="MM"
+            max="99"
+            size="number"
+          />
         </div>
         <div class="input_wrapper year">
-          <h4>Year</h4>
-          <input type="number" placeholder="YYYY" max="9999" />
+          <h4 class="names">YEAR</h4>
+          <input
+            type="number"
+            id="input_wrapperYear"
+            placeholder="YYYY"
+            max="9999"
+          />
         </div>
       </section>
       <section class="submit_btn">
         <hr />
-        <div class="backgroundIcon">
-          <img src="./assets/images/icon-arrow.svg" />
-        </div>
+        <button class="backgroundIcon" id="ageBtn">
+          <div>
+            <img src="./assets/images/icon-arrow.svg" />
+          </div>
+        </button>
       </section>
+
       <section class="output">
         <div class="outputLine">
-          <h2>--</h2>
-          <h3>years</h3>
+          <h2 id="outYear">--</h2>
+          <h3><i>years</i></h3>
         </div>
         <div class="outputLine">
-          <h2>11</h2>
-          <h3>months</h3>
+          <h2 id="outMonth">--</h2>
+          <h3><i>months</i></h3>
         </div>
         <div class="outputLine">
-          <h2>--</h2>
-          <h3>days</h3>
+          <h2 id="outDate">--</h2>
+          <h3><i>days</i></h3>
         </div>
       </section>
     </main>
@@ -58,6 +85,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Gianluca</a>.
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>
 

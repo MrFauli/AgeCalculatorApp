@@ -19,10 +19,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 150px 0;
+  margin: 150px 24px;
 }
 main {
-  width: 375px;
+  width: 100%;
   background-color: white;
   padding: 36px 24px;
   border-radius: 5% 5% 20% 5%;
@@ -30,16 +30,20 @@ main {
 .date_wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 16px;
 }
 
 .date_wrapper .input_wrapper {
-  width: 72px;
+  width: 80px;
 }
 .date_wrapper input {
   font-size: 20px;
   width: 100%;
   height: 48px;
   padding-left: 8px;
+  border-radius: 8px;
+  font-weight: 800;
+  border: 1px solid grey;
 }
 .outputLine {
   display: flex;
@@ -67,25 +71,47 @@ main {
   text-align: center;
   border-radius: 70px;
   transform: translate(-50%, -50%);
+  border: 0px;
 }
 .backgroundIcon img {
   width: 32px;
+}
+.backgroundIcon button {
+  border: 0px;
 }
 .output h2 {
   color: hsl(259, 100%, 65%);
   font-size: 56px;
   font-weight: 900;
+  letter-spacing: -0.1em;
 }
 .output h3 {
   color: Black;
   font-size: 48px;
   font-weight: 900;
+  letter-spacing: -0.01em;
 }
 
 hr {
   margin: 56px 0;
 }
 .date_wrapper h4 {
-  opacity: 0.65;
-  font-size: larger;
+  opacity: 0.6;
+  font-size: small;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+.date_wrapper h4 {
+  margin-bottom: 4px;
+}
+
+.red-headline {
+  color: #ff0000;
+}
+.boxError {
+  color: #ff0000;
+  font-style: italic;
+  font-size: xx-small;
+  margin-top: 2px;
+  line-height: 100%;
 }
