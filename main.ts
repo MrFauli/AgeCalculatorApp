@@ -1,3 +1,4 @@
+// Implement the HTML elements
 const dateWrapper = <HTMLInputElement>(
   document.getElementById("input_wrapperDay")
 );
@@ -19,12 +20,15 @@ const year = date.getFullYear();
 const monthLength = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 let today: string = theDay.toString();
 let month: string = theMonth.toString();
+// Transform the dates
 if (theDay.toString.length == 1) {
   today = "0" + theDay;
 }
 if (theMonth.toString.length == 1) {
   month = "0" + theMonth;
 }
+
+// Load the Local Storage
 let storageBirthday = localStorage.getItem("Birthday")
   ? JSON.parse(localStorage.getItem("Birthday") || "")
   : 0;
@@ -36,6 +40,7 @@ let calculateTheAge = () => {
   let livedYears = 0;
   let livedMonth = 0;
   let livedDays = 0;
+  // checks if is any input field empty
   if (
     dateWrapper.value == "" ||
     monthWrapper.value == "" ||
@@ -52,6 +57,7 @@ let calculateTheAge = () => {
       emptyInputs.push(2);
     }
     makeError(true, 1, emptyInputs);
+    // check if is any value invalid
   } else if (
     1 > birthdate ||
     birthdate > monthLength[month2 + 1] ||
@@ -74,7 +80,9 @@ let calculateTheAge = () => {
     }
     console.log("List", invalidValues);
     makeError(true, 2, invalidValues);
-  } else {
+  }
+  // calculate the age
+  else {
     makeError(false);
 
     if (
@@ -108,12 +116,13 @@ let calculateTheAge = () => {
       month: birthmonth,
       year: birthyear,
     };
+    // We only save valid dates in the local Storage
     localStorage.setItem("Birthday", JSON.stringify(localBirthday));
   }
 };
 
 Btn.addEventListener("click", calculateTheAge);
-
+//  display the errors, like empty or invalid inputs
 let makeError = (onOrOff, error = 0, list = <number[]>[]) => {
   const names = document.getElementsByClassName("names");
   const inputFields = document.getElementsByClassName("date_wrapper");
@@ -154,6 +163,7 @@ let makeError = (onOrOff, error = 0, list = <number[]>[]) => {
       outputYear.innerText = "--";
     });
   } else {
+    // if the error was fixed, delete the error setings
     monthWrapper.style.border = "1px solid black";
     yearWrapper.style.border = "1px solid black";
     dateWrapper.style.border = "1px solid black";
@@ -164,6 +174,7 @@ let makeError = (onOrOff, error = 0, list = <number[]>[]) => {
   console.log(error);
   console.log(list);
 };
+// if anything is in the localStorage, it will be load here
 if (storageBirthday != 0) {
   dateWrapper.value = storageBirthday.day;
   monthWrapper.value = storageBirthday.month;
